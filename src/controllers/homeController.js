@@ -6,6 +6,9 @@ router.get("/", (req, res) => {
   res.render("index");
 });
 
+
+
+
 router.get("/order", (req, res) => {
   res.render("order");
 });
@@ -13,6 +16,18 @@ router.get("/order", (req, res) => {
 router.get("/beADeliver", (req, res) => {
   res.render("beADeliver");
 });
+
+router.get("/learnMore", (req, res) => {
+  res.render("learnMore");
+});
+
+
+router.get("/binds", (req, res) => {
+  res.render("binds");
+});
+
+
+
 
 router.get("/about", (req, res) => {
   res.render("about");

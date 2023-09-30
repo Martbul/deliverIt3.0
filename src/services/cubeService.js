@@ -1,5 +1,5 @@
 const uniqid = require("uniqid");
-const cubes = [];
+
 
 
 exports.create = (cubeData) => {
