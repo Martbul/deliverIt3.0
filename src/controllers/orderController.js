@@ -21,12 +21,6 @@ router.post("/create", async (req, res) => {
 
 
 
-router.get("/binds", async (req, res) => {
-  const { search, from, to } = req.query;
-  const orders = await orderService.getAll(search, from, to);
-
-  res.render("index", { orders, search, from, to });
-});
 
 
 module.exports = router;

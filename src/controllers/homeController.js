@@ -1,12 +1,10 @@
 const router = require("express").Router();
-const cubeService = require("../services/cubeService");
+const orderService = require("../services/orderService");
 
 
 router.get("/", (req, res) => {
   res.render("index");
 });
-
-
 
 
 router.get("/order", (req, res) => {
@@ -22,8 +20,12 @@ router.get("/learnMore", (req, res) => {
 });
 
 
-router.get("/binds", (req, res) => {
-  res.render("binds");
+
+router.get("/binds", async (req, res) => {
+  const { search, from, to } = req.query;
+  const orders = await orderService.getAll(search, from, to);
+
+  res.render("binds", { orders, search, from, to });
 });
 
 

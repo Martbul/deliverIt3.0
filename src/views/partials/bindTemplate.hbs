@@ -1,7 +1,8 @@
-<div class="cube">
-   <img class="cube" src="{{order:}}" />
+<div class="order">
    <p class="name">{{name}}</p>
-   <p><span>Difficulty level:</span> {{dayForDelivery}}</p>
-   <p><span>Difficulty level:</span> {{timeForDelivery}}</p>
-   <a class="btn" href="/cubes/{{_id}}/details">Details</a>
+   <p class="order">{{order}}</p>
+   <p><span>Day for delivery:</span> {{dayForDelivery}}</p>
+   <p><span>Time for delivery:</span> {{timeForDelivery}}</p>
+   <a class="btn" href="/orders/details/{{_id}}">Details</a>
+   <a class="btn" href="/cubes/{{_id}}/details">BindIt</a>
 </div>
