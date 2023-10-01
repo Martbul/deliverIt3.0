@@ -20,6 +20,18 @@ router.post("/create", async (req, res) => {
 })
 
 
+router.get('/details/:orderId', async (req, res) => {
+  const orderId = req.params
+
+  const order = await orderService.getSingleOrder(orderId).lean()
+
+  if (!order) {
+    res.redirect('/404')
+    return
+  }
+
+  res.render("details")
+})
 
 
 

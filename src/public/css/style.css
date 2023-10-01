@@ -8317,7 +8317,9 @@ textarea.form-control {
 
 .ftco-animate {
   opacity: 0;
-  visibility: hidden; }
+  visibility: hidden;
+
+}
 
 .bg-primary {
   background: #fac564 !important; }
@@ -9102,6 +9104,9 @@ div.oder:hover p.name {
   color: white;
 }
 
+.deliverItOptions{
+  
+}
 
  
 

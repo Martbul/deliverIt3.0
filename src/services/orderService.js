@@ -17,7 +17,7 @@ exports.getAll = async (search, from, to) => {
   }
 
   if (from) {
-    filterOrders = filterfilterOrders.filter(
+    filterOrders = filterOrders.filter(
       (order) => order.difficultyLevel >= Number(from)
     );
   }
@@ -30,3 +30,5 @@ exports.getAll = async (search, from, to) => {
 
   return filterOrders;
 };
+
+exports.getSingleOrder = (id) => Order.findById(id)
