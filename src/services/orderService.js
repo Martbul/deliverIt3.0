@@ -23,6 +23,7 @@ exports.getAll = async (search, from, to) => {
   }
 
   if (to) {
+    
     filterOrders = filterOrders.filter(
       (order) => order.difficultyLevel <= Number(to)
     );
